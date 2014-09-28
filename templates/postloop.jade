@@ -1,0 +1,13 @@
+div.col-md-12
+  div.post-header
+    h1
+      a(href="{{PERMALINK}}#headline") {{TITLE}}
+  div.post-meta
+    ul.list-inline
+      li Posted by {{AUTHOR}}
+      li in {{CATEGORY}}
+      li on {{POST_DATE}}
+      li
+        a(href="{{PERMALINK}}#disqus_thread") link
+  div
+    {{ BODY }}

@@ -1,0 +1,107 @@
+@import "compass/css3";
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  padding-top: 0;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  width: 100%;
+  background-color: #f5f5f5;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+}
+
+
+.post-meta {
+    .list-inline {
+        li {
+            font-style: italic;
+            padding-right: 0;
+        }
+    }
+}
+
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -65px;
+    visibility: hidden;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  position: relative;
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+.mediachicken-svg {
+    max-width: 325px;
+    min-width: 36px;
+
+    position: fixed;
+    top: 7px;
+    left: 50%;
+    margin-left: -160px;
+
+    z-index: 200;
+
+    &.fullsize {
+        @include transition-property(width, margin-left);
+        @include transition-duration(.1s);
+
+    }
+}
+
+.header-spacer {
+    height: 340px;
+    &.sticky {
+        height: 410px;
+    }
+}
+
+
+.post-header {
+
+}
+
+#navigation {
+    width: 648px;
+    z-index: 100;
+    @include transition-property(box-shadow);
+    @include transition-duration(.5s);
+    &.sticky {
+        position: fixed;
+        top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+    }
+}
