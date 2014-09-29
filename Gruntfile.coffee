@@ -36,6 +36,12 @@ module.exports = (grunt) ->
         sourceMap: true
         bare: true
         force: true
+      compile:
+        expand: true
+        cwd: 'templates/coffee/'
+        src: '**/*.coffee'
+        dest: 'static/js/'
+        ext: '.js'
       modified:
         expand: true
         cwd: 'templates/coffee/'
