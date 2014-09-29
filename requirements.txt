@@ -6,3 +6,5 @@ itsdangerous==0.24
 pyjade==3.0.0
 six==1.8.0
 PyYAML==3.11
+Markdown==2.5.1
+Flask-Cache==0.13.1
