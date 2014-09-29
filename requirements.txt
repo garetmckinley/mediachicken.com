@@ -5,4 +5,4 @@ Werkzeug==0.9.6
 itsdangerous==0.24
 pyjade==3.0.0
 six==1.8.0
-
+PyYAML==3.11
