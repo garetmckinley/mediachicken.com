@@ -1,6 +1,4 @@
 doctype 5
-- load static
-- load bones_menus
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -9,8 +7,8 @@ html(lang='en')
     meta(name='author', content='')
     link(rel='shortcut icon', href='#{pathToAssets}/assets/ico/favicon.png')
     title Bones Index
-    link(href='{{TEMPLATE_STATIC}}/css/framework.css', rel='stylesheet')
-    link(href='{{TEMPLATE_STATIC}}/css/main.css', rel='stylesheet')
+    link(href="{{ url_for('static', filename='css/framework.css') }}", rel='stylesheet')
+    link(href="{{ url_for('static', filename='css/main.css') }}", rel='stylesheet')
     meta(name="viewport", content="width=device-width, initial-scale=1")
     script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js")
   body
@@ -18,10 +16,8 @@ html(lang='en')
     div#wrap
       // Begin page content
       div.container
-        if modernizr.svg
-          a(href="/")
-            img(src="{{TEMPLATE_STATIC}}/mediachicken.svg").img-responsive.mediachicken-svg#logo
-        endif
+        a(href="/")
+          img(src="mediachicken.svg").img-responsive.mediachicken-svg#logo
         div.header-spacer
 
 
@@ -36,21 +32,19 @@ html(lang='en')
 
             div.collapse.navbar-collapse#bs-example-navbar-collapse-1
               ul.nav.navbar-nav
-                - get_menu_items "main-navigation" as items
-                for key,item in items.items
-                  li(class="{{item.class|default_if_none:''}}")
-                    a(href="{{item.url}}")= item.title
-                endfor
+                li
+                  a(href="#")= Home
 
 
         // This is where subtemplates get rendered
-        {{ PAGE_CONTENT }}
+        block body
+        endblock
 
     div#footer
       div.container
         p.text-muted.credit
           | Hosted with <3 by DigitalOcean
-    script(type="text/javascript" src="{{TEMPLATE_STATIC}}/js/main.js")
+    script(type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}")
     script.
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'mediachicken';
