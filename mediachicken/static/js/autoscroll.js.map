@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "autoscroll.js",
+  "sourceRoot": "../../templates/coffee/",
+  "sources": [
+    "autoscroll.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA"
+}
