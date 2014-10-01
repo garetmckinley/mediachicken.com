@@ -6,7 +6,11 @@ html(lang='en')
     meta(name='description', content='')
     meta(name='author', content='')
     link(rel='shortcut icon', href='#{pathToAssets}/assets/ico/favicon.png')
-    title Bones Index
+    if params
+      title= params.TITLE
+    else
+      title Index
+    endif
     link(href="{{ url_for('static', filename='css/framework.css') }}", rel='stylesheet')
     link(href="{{ url_for('static', filename='css/main.css') }}", rel='stylesheet')
     meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -17,7 +21,7 @@ html(lang='en')
       // Begin page content
       div.container
         a(href="/")
-          img(src="mediachicken.svg").img-responsive.mediachicken-svg#logo
+          img(src="{{ url_for('static', filename='img/mediachicken.svg') }}").img-responsive.mediachicken-svg#logo
         div.header-spacer
 
 
@@ -32,9 +36,10 @@ html(lang='en')
 
             div.collapse.navbar-collapse#bs-example-navbar-collapse-1
               ul.nav.navbar-nav
-                li
-                  a(href="#")= Home
-
+                for key in import_yml("nav")
+                  li
+                    a(href="{{import_yml('nav')[key].url}}")= import_yml('nav')[key].title
+                endfor
 
         // This is where subtemplates get rendered
         block body

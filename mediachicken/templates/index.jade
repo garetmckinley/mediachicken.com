@@ -1,6 +1,19 @@
 extends "wrapper.jade"
 block body
-    .row
-        // Post
-        h1 Test Post
+  for post in posts
+    div.col-md-12
+      div.post-header
+        h1
+          a(href="{{post.permalink}}#headline") {{post.title}}
+      div.post-meta
+        ul.list-inline
+          li Posted by {{post.author}}
+          li in {{post.category.title}}
+          li on {{post.date|datetime}}
+          li
+            a(href="{{PERMALINK}}#disqus_thread") link
+      div
+        {{ post.summary }}
+
+  endfor
 endblock
