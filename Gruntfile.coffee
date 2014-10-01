@@ -13,21 +13,21 @@ module.exports = (grunt) ->
       options:
         livereload: true
       template:
-        files: ['templates/scss/*.scss', 'templates/coffee/*.coffee']
+        files: ['mediachicken/templates/scss/*.scss', 'mediachicken/templates/coffee/*.coffee']
         tasks: ['compass:modified', 'coffee:modified']
 
 
     compass:
       options:
-        sassDir: 'templates/scss/'
-        cssDir: 'static/css/'
+        sassDir: 'mediachicken/templates/scss/'
+        cssDir: 'mediachicken/static/css/'
       compile:
-        sassDir: 'templates/scss/'
-        cssDir: 'static/css/'
+        sassDir: 'mediachicken/templates/scss/'
+        cssDir: 'mediachicken/static/css/'
       modified:
-        cwd: 'templates/scss'
+        cwd: 'mediachicken/templates/scss'
         src: '**/*.scss'
-        dest: 'static/css'
+        dest: 'mediachicken/static/css'
         ext: '.css'
         filter: isModified
 
@@ -38,15 +38,15 @@ module.exports = (grunt) ->
         force: true
       compile:
         expand: true
-        cwd: 'templates/coffee/'
+        cwd: 'mediachicken/templates/coffee/'
         src: '**/*.coffee'
-        dest: 'static/js/'
+        dest: 'mediachicken/static/js/'
         ext: '.js'
       modified:
         expand: true
-        cwd: 'templates/coffee/'
+        cwd: 'mediachicken/templates/coffee/'
         src: '**/*.coffee'
-        dest: 'static/js/'
+        dest: 'mediachicken/static/js/'
         ext: '.js'
         filter: isModified
 
