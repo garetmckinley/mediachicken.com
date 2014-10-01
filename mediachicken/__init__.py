@@ -1,7 +1,6 @@
 from flask import Flask
 from flask.ext.cache import Cache
 from werkzeug.routing import BaseConverter
-import redis
 import os
 
 
@@ -13,9 +12,6 @@ class RegexConverter(BaseConverter):
 
 
 app = Flask(__name__)
-app.redis = redis.StrictRedis(
-    host='localhost',
-    port=6379, db=0)
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 app.url_map.converters['regex'] = RegexConverter
 app.config.from_object('mediachicken.conf')

@@ -9,16 +9,9 @@ import re
 import yaml
 
 
-@app.route("/redis.json")
-def clouds():
-    data = app.redis.getset("this", "shit")
-    return str(data)
-
-
 @app.route('/')
 @cache.cached(timeout=5)
 def index():
-    app.redis.rpush("members", "Adam")
     return render_template('index.jade',
                            posts=functions.get_posts_from_index()[:5])
 

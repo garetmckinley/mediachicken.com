@@ -1,7 +1,6 @@
 from mediachicken import app
 from slugify import slugify
 from dateutil.parser import parse
-import redis
 import os
 import re
 import sys
