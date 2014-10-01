@@ -1,7 +1,7 @@
 extends "wrapper.jade"
 block body
   for post in posts
-    div.col-md-12
+    div.col-md-12.postloop
       div.post-header
         h1
           a(href="{{post.permalink}}#headline") {{post.title}}
