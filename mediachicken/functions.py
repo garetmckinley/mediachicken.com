@@ -4,6 +4,7 @@ from dateutil.parser import parse
 import os
 import re
 import sys
+import time
 import yaml
 
 
@@ -16,6 +17,17 @@ def md_truncate(content, length=100, suffix='...'):
         return content
     else:
         return content[:length].rsplit(' ', 1)[0] + suffix
+
+
+def create_post_header(**kwargs):
+    params = {
+        'TITLE': kwargs.get('title',"No Title"),
+        'DATE': kwargs.get('date',time.strftime("%m/%d/%Y %H:%M")),
+        'STATUS': kwargs.get('status',"Draft"),
+        'AUTHOR': kwargs.get('author',"Anonymous")
+    }
+    header = '```\n%s```\n' % yaml.dump(params, default_flow_style=False)
+    return header
 
 
 def post_exists(category, slug):
