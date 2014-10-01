@@ -1,6 +1,7 @@
 from mediachicken import app
 from slugify import slugify
 from dateutil.parser import parse
+from markdown import markdown
 import os
 import re
 import sys
@@ -86,13 +87,13 @@ def build_post_index():
                 for slug in files:
                     slug = slug.split('.')[0]
                     header, body, params = get_post(category, slug)
-                    summary = md_truncate(body, 500)
+                    summary = md_truncate(body, 1000)
                     post = {
                         'title': params['TITLE'],
                         'slug': slug,
                         'date': params['DATE'],
                         'status': params['STATUS'],
-                        'summary': summary,
+                        'summary': markdown(summary),
                         'permalink': '/%s/%s/' % (category_slug, slug),
                         'category': {
                             'title': category,
