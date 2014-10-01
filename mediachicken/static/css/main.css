@@ -113,3 +113,8 @@ a.anchor {
   border-top-left-radius: 0;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
+
+/* line 110, ../../templates/scss/main.scss */
+.postloop h2 {
+  font-size: 20px;
+}
