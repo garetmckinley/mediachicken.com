@@ -109,6 +109,3 @@ def build_post_index():
     index = open(posts_index, 'w+')
     index.write(post_data)
     return post_data
-
-
-build_post_index()
