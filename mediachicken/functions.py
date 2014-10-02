@@ -71,8 +71,12 @@ def sort_posts(posts, order='DESC'):
 
 def get_posts_from_index():
     posts_index = os.path.join(app.config["BASE_DIR"], "posts", "index.yml")
-    yml = yaml.load(open(posts_index, 'r').read())
-    return sort_posts(yml)
+    if os.path.isfile(posts_index):
+        yml = yaml.load(open(posts_index, 'r').read())
+        return sort_posts(yml)
+    else:
+        yml = yaml.load(build_post_index())
+        return yml
 
 
 def build_post_index():
@@ -101,8 +105,10 @@ def build_post_index():
                         }
                     }
                     posts.append(post)
+    post_data = yaml.dump(posts)
     index = open(posts_index, 'w+')
-    index.write(yaml.dump(posts))
+    index.write(post_data)
+    return post_data
 
 
 build_post_index()
