@@ -2,4 +2,5 @@
 *.pyc
 .sass-cache
 node_modules
-index.yml
+#index.yml
+
