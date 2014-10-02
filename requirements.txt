@@ -12,3 +12,4 @@ redis==2.10.3
 python-slugify==0.0.9
 python-dateutil==2.2
 gunicorn==19.1.1
+-e git://github.com/pashinin/fabric.git#egg=Fabric
