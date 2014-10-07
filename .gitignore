@@ -3,4 +3,5 @@
 .sass-cache
 node_modules
 #index.yml
-
+mediachicken/static/css
+mediachicken/static/js
