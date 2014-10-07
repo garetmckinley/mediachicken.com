@@ -11,7 +11,7 @@ html(lang='en')
     else
       title Index
     endif
-    link(href="{{ url_for('static', filename='css/lib/bootstrap.css') }}", rel='stylesheet')
+    link(href="{{ url_for('static', filename='lib/css/bootstrap.css') }}", rel='stylesheet')
     link(href="{{ url_for('static', filename='css/main.css') }}", rel='stylesheet')
     meta(name="viewport", content="width=device-width, initial-scale=1")
     script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js")
@@ -39,11 +39,9 @@ html(lang='en')
                 for key in import_yml("nav")
                   li
                     a(href="{{import_yml('nav')[key].url}}")= import_yml('nav')[key].title
-                endfor
 
         // This is where subtemplates get rendered
         block body
-        endblock
 
     div#footer
       div.container
