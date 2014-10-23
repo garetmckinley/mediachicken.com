@@ -1,0 +1,10 @@
+css:
+  - "/static/lib/css/bootstrap.css"
+  - "/static/css/main.css"
+js:
+  - "https://code.jquery.com/jquery-1.11.1.min.js"
+meta:
+  -
+    name: viewport
+    content: "width=device-width, initial-scale=1"
+favicon: "#{pathToAssets}/assets/ico/favicon.png"

@@ -11,10 +11,7 @@ html(lang='en')
     else
       title Index
     endif
-    link(href="{{ url_for('static', filename='lib/css/bootstrap.css') }}", rel='stylesheet')
-    link(href="{{ url_for('static', filename='css/main.css') }}", rel='stylesheet')
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    script(type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js")
+    = template_header()|safe
   body
     // Wrap all page content here
     div#wrap
@@ -47,15 +44,4 @@ html(lang='en')
       div.container
         p.text-muted.credit
           | Hosted with <3 by DigitalOcean
-    script(type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}")
-    script.
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'mediachicken';
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-          var s = document.createElement('script'); s.async = true;
-          s.type = 'text/javascript';
-          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
+    = template_footer()|safe
