@@ -19,7 +19,7 @@ def index():
 @app.route('/<category>/<slug>/')
 def singlepost(category, slug):
     header, body, params = functions.get_post(category, slug)
-    if params['STATUS'] == "Published":
+    if params['STATUS'].lower() == "published":
         html = markdown(body)
         return render_template('singlepost.jade', body=html, params=params)
     else:
