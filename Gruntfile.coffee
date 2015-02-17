@@ -24,6 +24,9 @@ module.exports = (grunt) ->
       compile:
         sassDir: 'mediachicken/templates/scss/'
         cssDir: 'mediachicken/static/css/'
+        src: '**/*.scss'
+        dest: 'mediachicken/static/css'
+        ext: '.css'
       modified:
         cwd: 'mediachicken/templates/scss'
         src: '**/*.scss'
