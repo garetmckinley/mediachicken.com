@@ -95,6 +95,7 @@ def build_post_index():
                     header, body, params = get_post(category, slug)
                     summary = md_truncate(body, 1000)
                     post = {
+                        'author': params['AUTHOR'],
                         'title': params['TITLE'],
                         'slug': slug,
                         'date': params['DATE'],
