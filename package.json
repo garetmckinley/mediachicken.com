@@ -11,6 +11,6 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "scripts": {
-    "postinstall": "./node_modules/grunt-cli/bin/grunt template:compile"
+    //"postinstall": "./node_modules/grunt-cli/bin/grunt template:compile"
   }
 }

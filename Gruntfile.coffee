@@ -59,3 +59,4 @@ module.exports = (grunt) ->
   @loadNpmTasks("grunt-contrib-coffee")
   @registerTask "default", ["watch", "compass", "coffee"]
   @registerTask "template:compile", ["compass:compile", "coffee:compile"]
+  @registerTask "heroku:production", ["template:compile"]
