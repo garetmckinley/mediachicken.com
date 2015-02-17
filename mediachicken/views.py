@@ -1,6 +1,6 @@
 from flask import (Flask, request, session, g,
                    redirect, url_for, abort,
-                   render_template, flash, Response, json)
+                   render_template, flash, Response, json, send_file)
 
 from mediachicken import app, cache, functions
 import os.path
@@ -23,4 +23,10 @@ def singlepost(category, slug):
         html = markdown(body)
         return render_template('singlepost.jade', body=html, params=params)
     else:
-        pass  # 404
+        abort(404)  # 404
+
+
+@app.route('/<category>/<slug>/img/<image>')
+def singlepost_img(category, slug, image):
+    filename = "posts/%s/%s/%s" % (category, slug, image)
+    return send_file(filename, mimetype='image/png')
