@@ -1,5 +1,4 @@
 $ ->
-  svg = $("#logo")
   nav = $("#navigation")
   previous = 0
   tick = 0
@@ -7,8 +6,6 @@ $ ->
 
   minifyNav = ->
     s = 36
-    $("#logo").width s
-    $("#logo").css "margin-left", -s/2 + "px"
     $("#navigation").addClass "sticky"
     $(".header-spacer").addClass "sticky"
 
@@ -19,17 +16,8 @@ $ ->
 
     if (distance < previous - tick or distance > previous + tick)
       if (-distance >= 36 and -distance < 330)
-        if $("#logo").hasClass "fullsize"
-          $("#logo").removeClass "fullsize"
         previous = distance
         s = -(distance)*.90
-        $("#logo").width s
-        $("#logo").css "margin-left", -s/2 + "px"
-      else if -distance >= 330
-        $("#logo").addClass "fullsize"
-        s = 325
-        $("#logo").width s
-        $("#logo").css "margin-left", -s/2 + "px"
       else if scroll <= frozen
         if $("#navigation").hasClass "sticky"
           $("#navigation").removeClass "sticky"
