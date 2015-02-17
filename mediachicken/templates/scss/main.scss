@@ -65,19 +65,11 @@ a.anchor {
 .mediachicken-svg {
     max-width: 325px;
     min-width: 36px;
-
     position: fixed;
     top: 7px;
     left: 50%;
     margin-left: -160px;
-
     z-index: 200;
-
-    &.fullsize {
-        @include transition-property(width, margin-left);
-        @include transition-duration(.1s);
-
-    }
 }
 
 .header-spacer {
@@ -94,7 +86,10 @@ a.anchor {
 
 #navigation {
     width: 648px;
+    .container-fluid, .collapse {padding: 0;}
     z-index: 100;
+    background-color: white;
+    border: none;
     @include transition-property(box-shadow);
     @include transition-duration(.5s);
     &.sticky {
@@ -104,10 +99,38 @@ a.anchor {
         border-top-left-radius: 0;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
     }
+
+    /* Nav bar items */
+    ul.nav {
+        li a {
+            border-left: 3px solid rgba(0,0,0,0.05);
+        }
+    }
+
 }
 
 .postloop {
     h2 {
         font-size: 20px;
     }
+}
+
+.post-header {
+
+}
+
+.post-body {
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 1em;
+        text-indent: 0em;
+    }
+    ul li:before {
+        content: "\2014 \020";
+    }
+}
+
+.post-footer {
+
 }
