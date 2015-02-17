@@ -88,7 +88,8 @@ def build_post_index():
             category_dir = os.path.join(root, category)
             category_slug = slugify(category)
             for slugroot, folders, files in os.walk(category_dir):
-                files = [f for f in files if not f[0] == '.']
+                files = [f for f in files if  '.md' in f]
+                print(files)
                 for slug in files:
                     slug = slug.split('.')[0]
                     header, body, params = get_post(category, slug)
