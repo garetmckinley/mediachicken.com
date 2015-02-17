@@ -12,6 +12,6 @@ block body
             li in {{post.category.title}}
             li on {{post.date|datetime}}
             li
-              a(href="{{PERMALINK}}#disqus_thread") link
+              a(href="{{post.permalink}}#disqus_thread") link
         div
           {{ post.summary }}

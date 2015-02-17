@@ -3,6 +3,7 @@ css:
   - "/static/css/main.css"
 js:
   - "https://code.jquery.com/jquery-1.11.1.min.js"
+  - "/static/lib/js/skrollr.min.js"
 meta:
   -
     name: viewport

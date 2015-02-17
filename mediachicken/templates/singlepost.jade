@@ -9,8 +9,8 @@ block body
             a.anchor#headline
             = params.TITLE
         div.lead.post-body
+          span.post-meta Posted on {{params.DATE|datetime}} by {{params.AUTHOR}}
           = body|safe
-          = params.DATE
 
         div.post-header
           hr

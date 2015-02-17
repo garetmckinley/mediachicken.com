@@ -120,6 +120,10 @@ a.anchor {
 }
 
 .post-body {
+    .post-meta {
+        font-style: italic;
+        color: rgba(0,0,0,0.5)
+    }
     ul {
         list-style: none;
         margin-left: 0;
