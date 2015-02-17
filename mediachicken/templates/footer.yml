@@ -1,5 +1,5 @@
 js:
-  - "/static/js/skrollr.min.js"
+  - "/static/lib/js/skrollr.min.js"
   - "/static/js/main.js"
 script:
   - >
