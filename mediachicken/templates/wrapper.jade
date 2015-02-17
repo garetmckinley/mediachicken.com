@@ -18,7 +18,9 @@ html(lang='en')
       // Begin page content
       div.container
         a(href="/")
-          img(src="{{ url_for('static', filename='img/mediachicken.svg') }}").img-responsive.mediachicken-svg#logo
+          img(src="{{ url_for('static', filename='img/mediachicken.svg') }}",
+            data-0="width:325px;margin-left: -160px;",
+            data-330="width:36px;margin-left: -18px;").img-responsive.mediachicken-svg#logo
         div.header-spacer
 
 
