@@ -27,13 +27,12 @@ html(lang='en')
         nav.navbar.navbar-default(role="navigation")#navigation
           div.container-fluid
             div.navbar-header
-              button(type="button", class="navbar-toggle collapsed", data-toggle="collapse")
+              button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#main-nav")
                 span.sr-only Toggle navigation
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-
-            div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+            div.collapse.navbar-collapse#main-nav
               ul.nav.navbar-nav
                 for key in import_yml("nav")
                   li
