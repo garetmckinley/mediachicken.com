@@ -28,5 +28,5 @@ def singlepost(category, slug):
 
 @app.route('/<category>/<slug>/img/<image>')
 def singlepost_img(category, slug, image):
-    filename = "posts/%s/%s/%s" % (category, functions.simple_deslugify(slug), image)
+    filename = "posts/%s/%s/%s" % (functions.simple_deslugify(category), slug, image)
     return send_file(filename, mimetype='image/png')
