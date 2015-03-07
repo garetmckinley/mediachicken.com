@@ -38,6 +38,11 @@ def post_exists(category, slug):
         return True
     return False
 
+def get_blockfile(path):
+    pass
+
+def locate_blockfile(path):
+    pass
 
 def get_post(category, slug):
 
