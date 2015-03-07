@@ -1,4 +1,4 @@
-from flask import (Flask, request, session, g,
+from flask import (Flask, request, session, g, make_response,
                    redirect, url_for, abort,
                    render_template, flash, Response, json, send_file)
 
@@ -7,6 +7,7 @@ import os.path
 from markdown import markdown
 import re
 import yaml
+from datetime import datetime
 
 
 @app.route('/')
@@ -14,6 +15,19 @@ import yaml
 def index():
     return render_template('index.jade',
                            posts=functions.get_posts_from_index()[:5])
+
+
+@app.route('/sitemap.xml', methods=['GET'])
+@cache.cached(timeout=5)
+def sitemap():
+    posts = functions.get_posts_from_index()
+    pages = []
+    for post in posts:
+        pages.append([post["permalink"], datetime.now()])
+    xml = render_template('sitemap.xml', pages=pages)
+    response = make_response(xml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
 
 
 @app.route('/<category>/<slug>/')
