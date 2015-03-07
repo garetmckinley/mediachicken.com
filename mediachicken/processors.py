@@ -22,9 +22,16 @@ def utility_processor():
             tag += ' content="%s"' % params['content']
         except:
             pass
+        try:
+            tag += ' charset="%s"' % params['charset']
+        except:
+            pass
         tag += '>\n'
         print(tag)
         return tag
+
+    def favicon(url):
+        return '<link href="%s" rel="shortcut icon">\n' % url
 
     def import_yml(name, dir=None):
         if dir:
@@ -51,6 +58,7 @@ def utility_processor():
             "js": js,
             "meta": meta,
             "script": script,
+            "favicon": favicon,
         }
 
 
