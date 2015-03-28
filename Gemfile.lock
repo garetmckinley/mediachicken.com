@@ -101,5 +101,6 @@ DEPENDENCIES
   jekyll
   jekyll-sitemap
   jemoji
+  kramdown
   puma
   rack-jekyll
