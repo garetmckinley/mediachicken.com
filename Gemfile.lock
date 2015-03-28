@@ -72,6 +72,10 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
+    rack (1.6.0)
+    rack-jekyll (0.3.5)
+      jekyll
+      rack
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -91,10 +95,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  classifier-reborn
+  bundler
   jekyll
   jekyll-sitemap
-  jekyll-watch
   jemoji
-  pygments.rb
-  redcarpet
+  rack-jekyll
