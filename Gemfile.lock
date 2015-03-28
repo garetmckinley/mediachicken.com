@@ -69,6 +69,8 @@ GEM
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.10)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
@@ -99,4 +101,5 @@ DEPENDENCIES
   jekyll
   jekyll-sitemap
   jemoji
+  puma
   rack-jekyll
