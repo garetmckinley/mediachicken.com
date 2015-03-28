@@ -12,7 +12,7 @@ I first saw Adobe Shape while venturing around the new and noteworthy apps in th
 On my first run, I was sitting back getting ready to watch the classic Disney movie "Aladdin". When Adobe Shape loaded, I noticed my iPhone started to instantly trace the merchant from Aladdin! I was shocked at how accurate it was tracing the movie, so I hit the save button and was then prompted to refine the artwork. The refining process is pretty lackluster, and doesn't allow you to use a paint brush [or similar tools] to add to or erase lines; it just allows you to select and deselect which lines to be used.
 
 
-{% include image.html url="/media/2014-10-23-my-first-session-with-adobe-shape-cc/adobe_shape_cc_refine_vector_paths.png" description="Adobe Shape CC Refine Vector Paths" %}
+{% include image.html url="http://garet.co/file/mediachicken/2014-10-23-my-first-session-with-adobe-shape-cc/adobe_shape_cc_refine_vector_paths.png" description="Adobe Shape CC Refine Vector Paths" %}
 
 
 ## The good
@@ -27,7 +27,7 @@ Looking past the exporting features, I began to concentrate on what it's made to
 ## Is there a way around it?
 Fortunately, the path from selection tool in Photoshop CC seemed to do a fine job at tracing the vector, especially when imported in at an ample resolution. The higher the resolution is, the smoother the curves will be due to the fact that Photoshop is a raster based graphics app. Here is a before and after shot of the auto-trace tool.
 
-{% include image.html url="/media/2014-10-23-my-first-session-with-adobe-shape-cc/adobe-shape-cc-result-auto-path-comparison.jpg" description="Adobe Shape CC Result Auto Path Comparison" %}
+{% include image.html url="http://garet.co/file/mediachicken/2014-10-23-my-first-session-with-adobe-shape-cc/adobe-shape-cc-result-auto-path-comparison.jpg" description="Adobe Shape CC Result Auto Path Comparison" %}
 
 Not bad for a raster app, eh? Now it's fully scaleable and can be turned into a custom shape! Although as expected, the paths are going to be a little too chaotic to manually edit it.
 

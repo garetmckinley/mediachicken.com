@@ -10,13 +10,13 @@ A little over a year ago I released a tool that extended Corona SDK's MovieClip 
 <h2>The original library</h2>
 Here was how the original MovieClip library worked,
 
-{% include image.html url="/media/2013-05-08-using-timelines-in-corona-sdk-movieclipx/Timeline-flowchart.001.jpg" description="Timeline flowchart" %}
+{% include image.html url="http://garet.co/file/mediachicken/2013-05-08-using-timelines-in-corona-sdk-movieclipx/Timeline-flowchart.001.jpg" description="Timeline flowchart" %}
 
 As you can see, every animation was it's own object. That means that if you wanted to make a walk animation and a run animation for your character, MovieClip would force you to create two separate objects and handle the toggling of visibility yourself.
 <h2>MovieClipX was born...</h2>
 I knew that wasn't a good solution. It makes for messy and repetitive code, and I'm a stickler for clean code. So that spawned my idea for MovieClipX
 
-{% include image.html url="/media/2013-05-08-using-timelines-in-corona-sdk-movieclipx/Timeline-flowchart.0021.jpg" description="Timeline flowchart" %}
+{% include image.html url="http://garet.co/file/mediachicken/2013-05-08-using-timelines-in-corona-sdk-movieclipx/Timeline-flowchart.0021.jpg" description="Timeline flowchart" %}
 
 &nbsp;
 
@@ -24,7 +24,7 @@ This already appears to be a better solution! With my library you can house <str
 <h2>Then came Timeline!</h2>
 But then last week, I had one more epiphany on how to make this library better...
 
-{% include image.html url="/media/2013-05-08-using-timelines-in-corona-sdk-movieclipx/Timeline-flowchart.0031.jpg" description="Timeline flowchart" %}
+{% include image.html url="http://garet.co/file/mediachicken/2013-05-08-using-timelines-in-corona-sdk-movieclipx/Timeline-flowchart.0031.jpg" description="Timeline flowchart" %}
 
 &nbsp;
 

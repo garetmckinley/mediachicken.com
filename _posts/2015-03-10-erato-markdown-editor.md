@@ -13,7 +13,7 @@ At some points, it was starting to feel like I was buying every new markdown edi
 
 Today was that day.
 
-{% include image.html url="/media/2015-03-10-erato-markdown-editor/erato-paradox.png" width="100%" description="Erato's beautifully minimal interface." %}
+{% include image.html url="http://garet.co/file/mediachicken/2015-03-10-erato-markdown-editor/erato-paradox.png" description="Erato's beautifully minimal interface." %}
 
 
 ## First Impressions
@@ -31,7 +31,7 @@ As should be included with all great markdown editors, Erato comes with custom C
 
 You can customize the CSS by going to preferences, selecting the "Custom..." theme, and hitting the "Edit" button. This will open up the CSS in your default CSS editor.
 
-{% include image.html url="/media/2015-03-10-erato-markdown-editor/erato-custom-css.png" width="100%" %}
+{% include image.html url="http://garet.co/file/mediachicken/2015-03-10-erato-markdown-editor/erato-custom-css.png" %}
 
 
 ## Auto-scrolling
@@ -45,7 +45,7 @@ Other than the expected export features located in the file menu, there's an awe
 ## Text Transforming Hotkeys
 As expected, Erato comes with a few standard hotkeys for instantly transforming text into markdown formatted text!
 
-{% include image.html url="/media/2015-03-10-erato-markdown-editor/text-transform-demo.gif" width="100%" %}
+{% include image.html url="http://garet.co/file/mediachicken/2015-03-10-erato-markdown-editor/text-transform-demo.gif" %}
 
 
 ### Hotkeys

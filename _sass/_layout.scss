@@ -1,4 +1,23 @@
 /**
+ * Images
+ */
+div.image {
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+        border-radius: 8px;
+    }
+}
+
+/**
+ * Hard Returns
+ */
+hr {
+    border: none;
+    border-bottom: 1px solid $grey-color-light;
+}
+
+/**
  * Site header
  */
 .site-header {

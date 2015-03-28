@@ -2,9 +2,9 @@
 title: Mediachicken
 email: self@mediachicken.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Self-taught jack of all trades. I dabble in everything from web
+  development to game development. This is where
+  I talk about it.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mediachicken.com" # the base hostname & protocol for your site
 twitter_username: igaret
@@ -17,6 +17,14 @@ paginate: 10
 paginate_path: "/:num/"
 
 permalink: "/:title"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      comments: true
+      related: true
 
 gems:
   - jekyll-sitemap
