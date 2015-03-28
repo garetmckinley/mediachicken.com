@@ -19,5 +19,6 @@ paginate_path: "/:num/"
 gems:
   - jekyll-sitemap
   - jemoji
+  - kramdown
 
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
