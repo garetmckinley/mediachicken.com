@@ -3,7 +3,7 @@ layout: post
 title:  "Create a private \"Dropbox\" file host using BitTorrent Sync"
 date:   2013-10-15 15:55:00
 category: tutorial
-tags BitTorrent Sync, BTSync, Cloud, Cloud File Host, DigitalOcean, Dropbox, File Host, File Sync, Google Drive, linux, NSA, PRISM, Private Cloud, Private Server, Private Sync, Secure, Sync, Sync Hacks, Torrent, ubuntu
+tags: BitTorrent Sync, BTSync, Cloud, Cloud File Host, DigitalOcean, Dropbox, File Host, File Sync, Google Drive, linux, NSA, PRISM, Private Cloud, Private Server, Private Sync, Secure, Sync, Sync Hacks, Torrent, ubuntu
 ---
 
 ## Why create your own cloud host when there are services like Dropbox that already exist?

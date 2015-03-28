@@ -2,7 +2,7 @@
 layout: post
 title:  "Using MovieClipX with your Corona SDK projects"
 date:   2012-07-06 16:52:00
-category: app review
+category: tutorial
 tags: corona sdk, library, lua, movieclip, movieclipx
 ---
 

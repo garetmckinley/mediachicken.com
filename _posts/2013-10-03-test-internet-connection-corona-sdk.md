@@ -2,7 +2,7 @@
 layout: post
 title:  "Check internet connection In Corona SDK"
 date:   2013-10-03 15:09:00
-category: tutorial
+category: app review
 tags: check, corona sdk, internet connection, varify, validate, lua, library, network, test, tutorial, code
 ---
 

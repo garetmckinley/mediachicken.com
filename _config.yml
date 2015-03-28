@@ -16,6 +16,8 @@ markdown: redcarpet
 paginate: 10
 paginate_path: "/:num/"
 
+permalink: "/:title"
+
 gems:
   - jekyll-sitemap
   - jemoji
